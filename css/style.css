@@ -1,0 +1,378 @@
+css
+/* Yakob Website - Main Stylesheet */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #c0392b;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --text-color: #333333;
+    --text-light: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary-color);
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+    min-height: 60vh;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--light-bg);
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.notice {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+section h3 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin: 25px 0 15px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Values */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.value-item {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+.value-item h4 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Images */
+.content-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Contact Info */
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-details {
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-details h3 {
+    margin-top: 0;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+.contact-details a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.hours {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hours h3 {
+    color: var(--white);
+    margin-top: 0;
+}
+
+.hours ul {
+    list-style: none;
+}
+
+.hours li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.hours li:last-child {
+    border-bottom: none;
+}
+
+/* Contact Form - kept for potential future use */
+.contact-form {
+    margin-top: 40px;
+    background-color: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+}
+
+/* Responsive */
+/* Email CTA Section */
+.email-cta {
+    text-align: center;
+    background-color: var(--light-bg);
+    padding: 50px 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.email-cta h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.email-cta p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.email-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(192, 57, 43, 0.3);
+}
+
+.email-button:hover {
+    background-color: #a93226;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(192, 57, 43, 0.4);
+}
+
+.email-icon {
+    font-size: 1.4rem;
+}
+
+.email-address {
+    margin-top: 20px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+}
